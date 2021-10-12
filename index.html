@@ -10,10 +10,67 @@
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="Conference">
     <title>CPS-IoT Week 2022</title>
+    <script type="text/javascript">
+        var slideIndex = 0
+        var auto = true
+        var timer
+        function showSlides() {
+            // if (typeof showSlides.idx == 'undefined') {
+            //     showSlides.idx = 0;
+            // }
+            if (auto == false) {
+                clearTimeout(timer)
+                auto = true
+            }
+
+
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (slideIndex > (slides.length - 1)) {
+                slideIndex = 0
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "inline-block";
+            dots[slideIndex].className += " active"
+            slideIndex++;
+            timer = setTimeout(showSlides, 12000);
+        }
+
+        function plusSlides(n) {
+          slideIndex += n - 1
+          auto = false
+          showSlides()
+        }
+
+        function currentSlide(n) {
+            slideIndex = n
+            auto = false
+            showSlides()
+        }
+        function init() {
+            showSlides()
+        }
+    </script>
+
 </head>
 
-<body>
-    <div class="banner">
+<body onload="init()">
+
+
+<!-- Page content -->
+<!-- <div class="main">
+  ...
+</div> -->
+
+<!--     <div class="banner">
         <img src="assets/banner2.jpg" alt="Conference Template Banner" width="2000" height="600"  style="position: relative; left:-452px; top:2px">
         <div class="top-left">
           <span class="title1" style="position: relative; left:-452px; top:2px">CPS-IoT Week 2022</span>
@@ -28,189 +85,134 @@
         <div class="bottom-right">
           May 3, 2022 <br> Virtual Conference
         </div>
-    </div>
-
-    <!-- <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a class="current" title="Conference Home Page" href=".">Home</a>
-            </td>
-        </tr>
-    </table> -->
-
-    <h2>What is This Competition?</h2>
-    <p style= "font-size: 1.33em;">
-
-      This competition invites student teams of all levels to develop and demonstrate innovative projects on the
-      topic of networked computing for edge applications. Projects of integrated computing, control, and
-      communication components on the ground, underwater or air mobile platforms are welcomed. Topics of
-      interest include but are not limited to unmanned aerial vehicle networks, urban aerial mobility, autonomous
-      driving, edge computing, and human-machine interfaces.
-    </p>
-    <ul>
-</ul>
-    <h2>Requirements</h2>
-    <p style= "font-size: 1.33em;">
-      Teams must develop solutions using embedded platforms of advanced computing capabilities. Each team
-      should consist of no more than five members including faculty mentors. The organizers can provide
-      embedded hardware solutions built on Jetson TX2 and related hardware and software technical support to
-      participating teams.
-    </p>
-
-    <h2>Submission Guidelines</h2>
-        <ul class=space_list>
-    <li style="list-style-type:square;font-size:20px">Teams are required to submit a project proposal including project title, abstract, team members and
-          advisor(s) to register for the competition. The abstract should state
-          the objective, approach, novelty and impact, and is limited to 300 words.</li>
-    <li style="list-style-type:square;font-size:20px">At the conference, each team will make a live presentation or play the recorded video, followed by Q&A.</li>
-  </ul>
-
-<h2>Evaluation Criteria</h2>
-<p style= "font-size: 1.33em;">
-The evaluation committee will select winners and honorable mentions based on the following criteria:
-</p>
-<ul class=space_list>
-<li style="list-style-type:square;font-size:20px">Quality of the design (relevance, completeness, novelty, and performance) – 50%</li>
-<li style="list-style-type:square;font-size:20px">Quality of the presentation (poster, video/live presentation, and Q&A) – 40%</li>
-<li style="list-style-type:square;font-size:20px">Impact of application (societal or economical values) – 10%</li>
-</ul>
-
-
-    <h2>Organizers</h2>
-<div>
-  <div>
-  <div style=" float:left; position: relative; left:60px; top:-10px; width: 50%;">
-        <img src="assets/ShengliFu.jpg"  width="150" height="200" style="text-align: center;"/>
-        <p style= "font-size: 1.33em;">
-        <a href="https://electrical.engineering.unt.edu/people/shengli-fu"> Shengli Fu </a> <br> Professor and Department Chair <br> Electrical Engineering <br> University of North Texas<br>
-        (Email: shengli.fu@unt.edu)
-</p>
-</div>
-
-<!-- <div style=" float:left; position: relative; left:60px; top:-10px; width: 50%;">
-      <img src="assets/YanWan.jpg"  width="150" height="200" style="text-align: center;"/>
-      <p style= "font-size: 1.33em;">
-      <a href="https://www.uta.edu/faculty/wanlab/"> Yan Wan </a> <br> University of Texas at Arlington <br>
-  (Email: yan.wan@uta.edu)
-</p>
-</div> -->
-
-
-<div style=" float:left; position: relative; left:-60px; top:-12px; width: 50%;">
-      <img src="assets/JunfeiXie.jpg"  width="150" height="200" style="text-align: center;"/>
-      <p style= "font-size: 1.33em;">
-      <a href="https://smile.sdsu.edu/">Junfei Xie</a> <br> Assistant Professor <br> Electrical and Computer Engineering <br> San Diego State University <br>
-      (Email: jxie4@sdsu.edu)
-    </p>
-</div>
-</div>
-
-    <!-- <h2>Sponsors</h2>
-    <div>
-    <div style=" float:left; position: relative; width: 20%; left:60px; bottom:10px;">
-          <img src="assets/uta.jpeg"  width="180" height="160" style="text-align: center;"/>
-    </div>
-
-
-    <div style=" float:left; position: relative;  width: 20%; left:60px; bottom:10px;">
-          <img src="assets/sdsu.png"  width="180" height="160" style="text-align: center;"/>
-    </div>
-
-    <div style=" float:left; position: relative;  width: 20%; left:60px; bottom:10px;">
-          <img src="assets/nvidia.jpeg"  width="180" height="160" style="text-align: center;"/>
-    </div>
-
-    <div style=" float:left; position: relative;  width: 20%; left:60px; bottom:10px;">
-          <img src="assets/aiaa.png"  width="170" height="160" style="text-align: center;"/>
-    </div>
-
-    <div style=" float:left; position: relative;  width: 20%; left:60px; bottom:10px;">
-          <img src="assets/nsf.jpeg"  width="170" height="160" style="text-align: center;"/>
-    </div>
     </div> -->
 
 
-    <!-- <h2>Participants</h2>
-    <ul class=space_list>
-    <li style="list-style-type:square;font-size:20px">Lehigh University</li>
-    <li style="list-style-type:square;font-size:20px">University of North Texas</li>
-    <li style="list-style-type:square;font-size:20px">University of Nevada, Reno</li>
-    <li style="list-style-type:square;font-size:20px">University Puerto Rico, Mayaguez</li>
-    <li style="list-style-type:square;font-size:20px">Carnegie Mellon University</li>
-    <li style="list-style-type:square;font-size:20px">Arizona State University</li>
-    <li style="list-style-type:square;font-size:20px">New Mexico State University</li>
-    <li style="list-style-type:square;font-size:20px">Georgia Institute of Technology</li>
-    <li style="list-style-type:square;font-size:20px">Birla Institute of Technology and Science, Pilani</li>
-    <li style="list-style-type:square;font-size:20px"> University of Electronic Science and Technology of China</li>
-    <li style="list-style-type:square;font-size:20px"> Beihang University</li>
-    <li style="list-style-type:square;font-size:20px"> San José State University</li>
-    <li style="list-style-type:square;font-size:20px"> University of Florida</li>
-    <li style="list-style-type:square;font-size:20px"> University of South Florida</li>
-    <li style="list-style-type:square;font-size:20px"> University of Wisconsin Eau Claire</li>
+    <div class="banners">
+        <div class="slide">
+            <img src="./assets/logo1.PNG">
+            <div class="top-left">
+              <span class="title1" style="position: relative; top:2px">2nd Student Design Competition on</span>
+              <br>
+              <br>
+                <br>
+                <span class="title2" style="position: relative; top:2px">Networked Computing on the Edge</span>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./assets/winner1_ly.PNG">
+        </div>
+        <div class="slide">
+            <img src="./assets/winner2_ly.PNG">
+        </div>
+        <div class="slide">
+            <img src="./assets/winner3_ly.PNG">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
-    </ul>
-
-    <h2>Evaluation Committee</h2>
-
-    <div>
-    <div style=" float:left; position: relative; left:60px; top:0px; width: 25%;">
-          <img src="assets/ShengliFu.jpg"  width="150" height="200" style="text-align: center;"/>
-          <p style= "font-size: 1.33em;">
-           Shengli Fu <br> Professor and Department Chair <br> Electrical Engineering <br> University of North Texas<br>
-    </p>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
 
-    <div style=" float:left; position: relative; left:185px; top:0px; width: 25%;">
-          <img src="assets/robertoValenti.png"  width="150" height="200" style="text-align: center;"/>
+    <div class="main">
+
+        <div class="content">
+
+            <h2>What is This Competition?</h2>
+            <p style= "font-size: 1.33em;">
+
+The 2nd student design competition on Networked Computing on the Edge will be held at the <a href="https://cpsiotweek.neslab.it/">CPS-IoT Week in May 2022</a>. This competition invites student teams of all levels to develop and demonstrate innovative projects on the topic of networked computing for edge applications. Projects of integrated computing, control, and communication components on the ground, underwater or air mobile platforms are welcomed. Topics of interest include but are not limited to unmanned aerial vehicle networks, urban aerial mobility, autonomous driving, edge computing, and human-machine interfaces.
+            </p>
+            <ul>
+        </ul>
+            <h2>Requirements</h2>
+            <p style= "font-size: 1.33em;">
+              Teams must develop solutions using embedded platforms of advanced computing capabilities. Each team
+              should consist of no more than five members including faculty mentors. The organizers can provide
+              embedded hardware solutions built on Jetson TX2 and related hardware and software technical support to
+              participating teams.
+            </p>
+
+            <h2>Submission Guidelines</h2>
+                <ul class=space_list>
+                  <li style="list-style-type:square;font-size:20px">Teams are required to submit a project proposal including project title, abstract, team members and
+                  advisor(s) to register for the competition. The abstract should state
+                  the objective, approach, novelty and impact, and is limited to 300 words. The registration deadline is
+                  <b>February 2, 2022.</b></li>
+                  <li style="list-style-type:square;font-size:20px">The registered teams will submit the final product by <b>April 17, 2022.</b> including a poster and a prerecorded video of their presentation.</li>
+                  <li style="list-style-type:square;font-size:20px">At the conference, each team will make a live presentation or play the recorded video, followed by Q&A.</li>
+                </ul>
+
+          <h2>Evaluation Criteria</h2>
           <p style= "font-size: 1.33em;">
-           Roberto Valenti <br> Senior Robotics Research Scientist <br> MathWorks  <br>
-    </p>
+          The evaluation committee will select winners and honorable mentions based on the following criteria:
+          </p>
+          <ul class=space_list>
+          <li style="list-style-type:square;font-size:20px">Quality of the design (relevance, completeness, novelty, and performance) – 50%</li>
+          <li style="list-style-type:square;font-size:20px">Quality of the presentation (poster, video/live presentation, and Q&A) – 40%</li>
+          <li style="list-style-type:square;font-size:20px">Impact of application (societal or economical values) – 10%</li>
+          </ul>
+
+
+        <h2>Organizers</h2>
+        <div>
+            <div style=" float:left; position: relative; left:60px; top:-10px; width: 30%;">
+                  <img src="assets/ShengliFu.jpg"  width="150" height="200" style="text-align: center;"/>
+                  <p style= "font-size: 1.33em;">
+                  <a href="https://electrical.engineering.unt.edu/people/shengli-fu"> Shengli Fu </a> <br> Professor and Department Chair <br> Electrical Engineering <br> University of North Texas<br>
+                  (Email: shengli.fu@unt.edu)
+                  </p>
+            </div>
+
+          <div style=" float:left; position: relative; left:100px; top:-12px; width: 30%;">
+                <img src="assets/JunfeiXie.jpg"  width="150" height="200" style="text-align: center;"/>
+                <p style= "font-size: 1.33em;">
+                <a href="https://smile.sdsu.edu/">Junfei Xie</a> <br> Assistant Professor <br> Electrical and Computer Engineering <br> San Diego State University <br>
+                (Email: jxie4@sdsu.edu)
+              </p>
+          </div>
+
+          <div style=" float:left; position: relative; left:160px; top:-12px; width: 30%;">
+                <img src="assets/robertoValenti.png"  width="150" height="200" style="text-align: center;"/>
+                <p style= "font-size: 1.33em;">
+                <a href="https://robertogl.github.io/">Roberto Valenti</a> <br> Senior Robotics Research Scientist <br> MathWorks <br>
+                (Email: rvalenti@mathworks.com)
+              </p>
+          </div>
+
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sect1">
+            <p>
+                Registration deadline:
+                <br>
+                <br>
+                <br>
+                 <b>02/04/2022</b>
+            </p>
+        </div>
+        <div class="sect2">
+            <p>
+              <br>
+              <br>
+                Final product submission deadline:
+                <br>
+                <br>
+                <br>
+                 <b>04/17/2022</b>
+            </p>
+        </div>
+
     </div>
 
-    <div style=" float:left; position: relative; left:285px; top:0px; width: 25%;">
-          <img src="assets/YanWan.jpg"  width="150" height="200" style="text-align: center;"/>
-          <p style= "font-size: 1.33em;">
-            Yan Wan <br> Distinguished University Professor<br> Electrical Engineering <br> University of Texas at Arlington
-    </p>
-    </div>
+</div>
 
-
-    <div style=" float:left; position: relative; left:380px; top:0px; width: 25%;">
-          <img src="assets/JunfeiXie.jpg"  width="150" height="200" style="text-align: center;"/>
-          <p style= "font-size: 1.33em;">
-          Junfei Xie <br> Assistant Professor <br> Electrical and Computer Engineering <br> San Diego State University <br>
-        </p>
-    </div>
-
-    </div> -->
-
-    <!-- <table class="sponsors">
-        <tr>
-            <td class="sponsor">
-                <a href="http://www.eyebleach.me/">
-                    <img src="assets/kitten1.jpg" alt="First Sponsor Name">
-                </a>
-            </td>
-            <td class="sponsor">
-                <a href="http://www.eyebleach.me/">
-                    <img src="assets/kitten2.jpg" alt="Second Sponsor Name" style="width: 80%">
-                </a>
-            </td>
-            <td class="sponsor">
-                <a href="http://www.eyebleach.me/">
-                    <img src="assets/kitten3.jpg" alt="Third Sponsor Name">
-                </a>
-            </td>
-        </tr>
-    </table> -->
-
-    <!-- <table class="footer">
-        <tr>
-            <td class="footer">Design by <a target="_blank" href="http://math.ucr.edu/~mpierce/">Mike Pierce</a></td>
-            <td class="footer">&copy; Conference Organizers</td>
-        </tr>
-    </table> -->
-
-    </body>
+</body>
 </html>
