@@ -59,144 +59,151 @@
             showSlides()
         }
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
 
 <body onload="init()">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <!-- Page content -->
 <!-- <div class="main">
   ...
 </div> -->
-
-    <div class="banner">
-        <img src="assets/logo.PNG" alt="Conference Template Banner" width="300" height="200"  style="position: relative; left:-270px; top:2px">
-        <div class="top-right">
-          <span>The 2nd Student Design Competition on Networked Computing on the Edge
-</span>
-        </div>
-    </div>
-
-
-    <div class="banners">
-        <div class="slide">
-            <img src="./assets/slide1.PNG" width="100" height="150">
-        </div>
-        <div class="slide">
-            <img src="./assets/price1.PNG" width="300" height="200">
-        </div>
-        <div class="slide">
-            <img src="./assets/price2.PNG" width="300" height="200">
-        </div>
-        <div class="slide">
-            <img src="./assets/price3.PNG" width="300" height="200">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-
-    <div class="main">
-
-        <div class="content">
-
-            <h2>What is This Competition?</h2>
-            <p style= "font-size: 1.33em;">
-
-The 2nd student design competition on Networked Computing on the Edge will be held at the <a href="https://cpsiotweek.neslab.it/">CPS-IoT Week in May 2022</a>. This competition invites student teams of all levels to develop and demonstrate innovative projects on the topic of networked computing for edge applications. Projects of integrated computing, control, and communication components on the ground, underwater or air mobile platforms are welcomed. Topics of interest include but are not limited to unmanned aerial vehicle networks, urban aerial mobility, autonomous driving, edge computing, and human-machine interfaces.
-            </p>
-            <ul>
-        </ul>
-            <h2>Requirements</h2>
-            <p style= "font-size: 1.33em;">
-              Teams must develop solutions using embedded platforms of advanced computing capabilities. Each team
-              should consist of no more than five members including faculty mentors. The organizers can provide
-              embedded hardware solutions built on Jetson TX2 and related hardware and software technical support to
-              participating teams.
-            </p>
-
-            <h2>Submission Guidelines</h2>
-                <ul class=space_list>
-                  <li style="list-style-type:square;font-size:20px">Teams are required to submit a project proposal including project title, abstract, team members and
-                  advisor(s) to <b>CPSIoTCompetition@unt.edu</b> to register for the competition. The abstract should state
-                  the objective, approach, novelty and impact, and is limited to 300 words. The registration deadline is
-                  <b>February 4, 2022.</b></li>
-                  <li style="list-style-type:square;font-size:20px">The registered teams will submit the final product by <b>April 17, 2022.</b> including a poster and a prerecorded video of their presentation.</li>
-                  <li style="list-style-type:square;font-size:20px">At the conference, each team will make a live presentation or play the recorded video, followed by Q&A.</li>
-                </ul>
-
-          <h2>Evaluation Criteria</h2>
-          <p style= "font-size: 1.33em;">
-          The evaluation committee will select winners and honorable mentions based on the following criteria:
-          </p>
-          <ul class=space_list>
-          <li style="list-style-type:square;font-size:20px">Quality of the design (relevance, completeness, novelty, and performance) – 50%</li>
-          <li style="list-style-type:square;font-size:20px">Quality of the presentation (poster, video/live presentation, and Q&A) – 40%</li>
-          <li style="list-style-type:square;font-size:20px">Impact of application (societal or economical values) – 10%</li>
-          </ul>
-
-
-        <h2>Organizers</h2>
-        <div>
-            <div style=" float:left; position: relative; left:60px; top:-10px; width: 30%;">
-                  <img src="assets/ShengliFu.jpg"  width="150" height="200" style="text-align: center;"/>
-                  <p style= "font-size: 1.33em;">
-                  <a href="https://electrical.engineering.unt.edu/people/shengli-fu"> Shengli Fu </a> <br> Professor and Department Chair <br> Electrical Engineering <br> University of North Texas<br>
-                  (Email: shengli.fu@unt.edu)
-                  </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/logo.PNG" alt="Conference Template Banner" class="img-fluid"  style="position: relative;">
             </div>
-
-          <div style=" float:left; position: relative; left:100px; top:-12px; width: 30%;">
-                <img src="assets/JunfeiXie.jpg"  width="150" height="200" style="text-align: center;"/>
-                <p style= "font-size: 1.33em;">
-                <a href="https://smile.sdsu.edu/">Junfei Xie</a> <br> Assistant Professor <br> Electrical and Computer Engineering <br> San Diego State University <br>
-                (Email: jxie4@sdsu.edu)
-              </p>
-          </div>
-
-          <div style=" float:left; position: relative; left:160px; top:-12px; width: 30%;">
-                <img src="assets/robertoValenti.png"  width="150" height="200" style="text-align: center;"/>
-                <p style= "font-size: 1.33em;">
-                <a href="https://robertogl.github.io/">Roberto Valenti</a> <br> Senior Robotics Research Scientist <br> MathWorks <br>
-                (Email: rvalenti@mathworks.com)
-              </p>
-          </div>
-
+            <div class="top-right col-9">
+              The 2nd Student Design Competition on Networked Computing on the Edge
+            </div>
         </div>
-    </div>
-    <div class="sidebar">
-        <div class="sect1">
-            <p>
-                <span style="color:#06AEF4;line-height:50px;">Registration deadline:</span>
-                <br>
-                <br>
-                <br>
-                 <b>02/04/2022</b>
-            </p>
+
+
+        <div class="banners row">
+            <div class="slide">
+                <img src="./assets/slide1.PNG" class="img-fluid">
+            </div>
+            <div class="slide">
+                <img src="./assets/price1.PNG" class="img-fluid">
+            </div>
+            <div class="slide">
+                <img src="./assets/price2.PNG" class="img-fluid">
+            </div>
+            <div class="slide">
+                <img src="./assets/price3.PNG" class="img-fluid">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="sect2">
-            <p>
-              <br>
-              <br>
-              <span style="color:#06AEF4;line-height:50px;">Final product submission deadline:</span>
-                <br>
-                <br>
-                <br>
-                 <b>04/17/2022</b>
-            </p>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+
+        <div class="row">
+            <div class="col-9">
+                <div class="main">
+                    <div class="content">
+
+                        <h2>What is This Competition?</h2>
+                        <p style= "font-size: 1.33em;">
+
+            The 2nd student design competition on Networked Computing on the Edge will be held at the <a href="https://cpsiotweek.neslab.it/">CPS-IoT Week in May 2022</a>. This competition invites student teams of all levels to develop and demonstrate innovative projects on the topic of networked computing for edge applications. Projects of integrated computing, control, and communication components on the ground, underwater or air mobile platforms are welcomed. Topics of interest include but are not limited to unmanned aerial vehicle networks, urban aerial mobility, autonomous driving, edge computing, and human-machine interfaces.
+                        </p>
+                        <ul>
+                    </ul>
+                        <h2>Requirements</h2>
+                        <p style= "font-size: 1.33em;">
+                          Teams must develop solutions using embedded platforms of advanced computing capabilities. Each team
+                          should consist of no more than five members including faculty mentors. The organizers can provide
+                          embedded hardware solutions built on Jetson TX2 and related hardware and software technical support to
+                          participating teams.
+                        </p>
+
+                        <h2>Submission Guidelines</h2>
+                            <ul class=space_list>
+                              <li style="list-style-type:square;font-size:20px">Teams are required to submit a project proposal including project title, abstract, team members and
+                              advisor(s) to <b>CPSIoTCompetition@unt.edu</b> to register for the competition. The abstract should state
+                              the objective, approach, novelty and impact, and is limited to 300 words. The registration deadline is
+                              <b>February 4, 2022.</b></li>
+                              <li style="list-style-type:square;font-size:20px">The registered teams will submit the final product by <b>April 17, 2022.</b> including a poster and a prerecorded video of their presentation.</li>
+                              <li style="list-style-type:square;font-size:20px">At the conference, each team will make a live presentation or play the recorded video, followed by Q&A.</li>
+                            </ul>
+
+                      <h2>Evaluation Criteria</h2>
+                      <p style= "font-size: 1.33em;">
+                      The evaluation committee will select winners and honorable mentions based on the following criteria:
+                      </p>
+                      <ul class=space_list>
+                      <li style="list-style-type:square;font-size:20px">Quality of the design (relevance, completeness, novelty, and performance) – 50%</li>
+                      <li style="list-style-type:square;font-size:20px">Quality of the presentation (poster, video/live presentation, and Q&A) – 40%</li>
+                      <li style="list-style-type:square;font-size:20px">Impact of application (societal or economical values) – 10%</li>
+                      </ul>
+
+
+                    <h2>Organizers</h2>
+                    <div>
+                        <div style=" float:left; position: relative; left:60px; top:-10px; width: 30%;">
+                              <img src="assets/ShengliFu.jpg"  width="150" height="200" style="text-align: center;"/>
+                              <p style= "font-size: 1.33em;">
+                              <a href="https://electrical.engineering.unt.edu/people/shengli-fu"> Shengli Fu </a> <br> Professor and Department Chair <br> Electrical Engineering <br> University of North Texas<br>
+                              (Email: shengli.fu@unt.edu)
+                              </p>
+                        </div>
+
+                      <div style=" float:left; position: relative; left:100px; top:-12px; width: 30%;">
+                            <img src="assets/JunfeiXie.jpg"  width="150" height="200" style="text-align: center;"/>
+                            <p style= "font-size: 1.33em;">
+                            <a href="https://smile.sdsu.edu/">Junfei Xie</a> <br> Assistant Professor <br> Electrical and Computer Engineering <br> San Diego State University <br>
+                            (Email: jxie4@sdsu.edu)
+                          </p>
+                      </div>
+
+                      <div style=" float:left; position: relative; left:160px; top:-12px; width: 30%;">
+                            <img src="assets/robertoValenti.png"  width="150" height="200" style="text-align: center;"/>
+                            <p style= "font-size: 1.33em;">
+                            <a href="https://robertogl.github.io/">Roberto Valenti</a> <br> Senior Robotics Research Scientist <br> MathWorks <br>
+                            (Email: rvalenti@mathworks.com)
+                          </p>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-3">
+                <div class="sidebar">
+                    <div class="sect1">
+                        <p>
+                            <span style="color:#06AEF4;line-height:50px;">Registration deadline:</span>
+                            <br>
+                            <br>
+                            <br>
+                             <b>02/04/2022</b>
+                        </p>
+                    </div>
+                    <div class="sect2">
+                        <p>
+                          <br>
+                          <br>
+                          <span style="color:#06AEF4;line-height:50px;">Final product submission deadline:</span>
+                            <br>
+                            <br>
+                            <br>
+                             <b>04/17/2022</b>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
 
     </div>
 
 </div>
-
 </body>
 </html>

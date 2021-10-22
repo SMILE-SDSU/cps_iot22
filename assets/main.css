@@ -32,9 +32,9 @@ body{
     text-align:left;
     font-family:'Roboto',sans-serif;
     font-size:1em;
-    line-height:1.5em;
+    /*line-height:1.5em;*/
     margin: 60px auto;
-    width: 1000px;
+    padding-top: 50px;
 }
 
 /*.banner {
@@ -49,16 +49,14 @@ body{
     max-width: 2000px;
     position: relative;
     margin: auto;
+    padding-top: 20px;
+    background: #fafafa;
 }
 
 .banners img {
     position: relative;
     display: inline-block;
     object-fit: cover;
-    width: 2000px;
-    height: 600px;
-    left: -452px;
-    top: 2px
 }
 
 .slide {
@@ -67,10 +65,10 @@ body{
 }
 
 a.prev, a.next {
+  text-decoration: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  left: -452px;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -80,12 +78,18 @@ a.prev, a.next {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  display: inline-block;
 }
 
 a.next {
-  left: 1500px;
+  right: 10px;
   border-radius: 3px 0 0 3px;
 }
+
+a.prev {
+  left: 10px;
+}
+
 
 .dot {
   cursor: pointer;
@@ -104,20 +108,15 @@ a.next {
 
 .main {
     position: relative;
-    width: 1200px;
-    left: -452px;
 }
 
 .content {
     position: relative;
-    width: 1000px;
     float: left
 }
 
 .sidebar{
     position: relative;
-    width: 100px;
-    padding-left: 100px;
     padding-top: 20px;
     text-align: center;
     float: left;
@@ -155,7 +154,6 @@ sub{
     line-height: 0;
 }
 table{
-    width: 1000px;
     margin: 12px auto 24px auto;
     float: center;
     /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
@@ -189,8 +187,8 @@ ul#horizontal-list li {
 
 
   .sidenav {
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    /*width: 160px; *//* Set the width of the sidebar */
+    position: relative; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
@@ -216,8 +214,9 @@ ul#horizontal-list li {
 
   /* Style page content */
   .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+/*    margin-left: 160px;*/ /* Same as the width of the sidebar */
+    padding-top: 35px;
+
   }
 
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -228,8 +227,8 @@ ul#horizontal-list li {
 
 /* Website Banner */
 .banner {position: relative; font-family:'Roboto Slab',serif;}
-.top-right {line-height:50px; font-size:2.33em; color: #000000; background: #fafafa; text-align: center; width: 1000px; height: 0px; position: absolute; padding: 0 0 0 0; top: 40px; left: 15px}
-.top-left {font-size:3.33em; color: #fafafa; background: #fafafa; text-align: center; width: 1000px; height: 0px; position: absolute; padding: 0 0 0 0; top: 180px; left: 7px}
+.top-right {line-height:50px; font-size:2.33em; color: #000000; background: #fafafa; text-align: center; position: relative; padding: 0 0 0 0;}
+.top-left {font-size:3.33em; color: #fafafa; background: #fafafa; text-align: center; position: relative; padding: 0 0 0 0;}
 .bottom-right {font-size:2.33em; color: #fafafa; line-height: 1.5em; width: auto; height: 100px; padding: 0px 27px 27px 0px; text-align: left; position: absolute; bottom: 0px; left: -150px; text-shadow: 0px 0px 6px #000000;}
 
 /* Conference Title Logo */
